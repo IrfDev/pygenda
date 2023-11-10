@@ -6,22 +6,21 @@ This project was made as part of the Kodemia bootcamp for learning Backend and C
 
 You can read the description of the project in the file `content.md`
 
-
-
 # Getting started
 
 Firstly activate your virtual python envrionment
 
-## Tech requirements 
+## Tech requirements
 
-Python v3+
-PostgreSQL 16+
+- Python v3+
+- PostgreSQL 16+
 
 ## Create your virtual environments
 
+### 1. Create your virtual environment
 
-### 1. Create your virtual environment 
 With Venv:
+
 ```python
 
 python -m venv ./.venv
@@ -29,6 +28,7 @@ python -m venv ./.venv
 ```
 
 With pyenv:
+
 ```python
 
 pip install pyenv
@@ -46,8 +46,8 @@ pyenv virtualenv YOUR_INSTALLED_PYTHON_VERSION THE_NAME_OF_YOUR_APP
 
 ```
 
-
 ### 2. Activate your virtual environemtn
+
 With Venv:
 
 ```python
@@ -58,13 +58,13 @@ source ./.venv/bin/activate
 
 With pyenv:
 
-````python
+```python
 pyenv activate THE_NAME_OF_YOUR_APP
 ```
 
-
 ## Install required dependencies
-Once your virtual environment is active, you can install pip dependencies on it 
+
+Once your virtual environment is active, you can install pip dependencies on it
 
 ### Install current dependencies
 
@@ -87,8 +87,3 @@ pip freeze > requirements.txt
 ```
 
 # CODE AS YOU MEAN IT
-
-
-
-
-
