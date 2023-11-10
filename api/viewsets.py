@@ -31,5 +31,7 @@ class UserViewSet(viewsets.ViewSet):
 class ContactViewSet(viewsets.ModelViewSet):
     serializer_class = api_serializers.ContactModelSerializer
 
+    queryset = models.Contact.objects.all()
+
     def get_queryset(self):
         return models.Contact.objects.filter(user=self.request.user)
