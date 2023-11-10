@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv, get_key
 
-load_dotenv()
+load_dotenv(dotenv_path=".env")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_key("DJANGO_SECRET_KEY")
+SECRET_KEY = get_key(key_to_get="DJANGO_SECRET_KEY", dotenv_path=".env")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -78,16 +78,16 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": get_key("DATABASE_NAME"),
-        "USER": get_key("DATABASE_USER"),
-        "PASSWORD": get_key("DATABASE_PASSWORD"),
-        "HOST": get_key("DATABASE_HOST"),
+        "NAME": get_key(key_to_get="DATABASE_NAME", dotenv_path=".env"),
+        "USER": get_key(key_to_get="DATABASE_USER", dotenv_path=".env"),
+        "PASSWORD": get_key(key_to_get="DATABASE_PASSWORD", dotenv_path=".env"),
+        "HOST": get_key(key_to_get="DATABASE_HOST", dotenv_path=".env"),
     }
 }
 
 
 # SIMPLE_JWT = {
-#     "ALGORITHM": get_key("JWT_ALGORITHM"),
+#     "ALGORITHM": get_key(key_to_get="J,dotenv_path=".env"WT_ALGORITHM"),
 # }
 
 # Password validation
