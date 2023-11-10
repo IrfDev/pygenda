@@ -4,6 +4,7 @@ from api import viewsets
 
 router = routers.DefaultRouter()
 router.register(r"contacts", viewsets.ContactViewSet)
+router.register(r"users", viewsets.UserViewSet, basename="users")
 
 
 urlpatterns = [

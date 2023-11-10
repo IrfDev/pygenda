@@ -10,13 +10,13 @@ class UserModelSerializer(serializers.ModelSerializer):
     Users from Django used as authentication
     """
 
-    contacts = serializers.PrimaryKeyRelatedField(
-        queryset=models.Contact.objects.all(), many=True
-    )
-
     class Meta:
         model = User
-        fields = ("username", "password", "email", "contacts")
+        fields = (
+            "username",
+            "password",
+            "email",
+        )
 
     def create(self, validated_data):
         return self.Meta.model.objects.create_user(**validated_data)
@@ -28,12 +28,13 @@ class ContactModelSerializer(serializers.ModelSerializer):
     """
 
     class Meta:
-        models = models.Contact
+        model = models.Contact
         fields = (
+            "id",
+            "user",
             "first_name",
             "last_name",
             "email",
             "local_phone",
             "mobile_phone",
-            "user",
         )
