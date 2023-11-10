@@ -87,3 +87,5 @@ pip freeze > requirements.txt
 ```
 
 # CODE AS YOU MEAN IT
+
+# [Postman Test](https://www.postman.com/irfdev/workspace/pygenda/globals)
